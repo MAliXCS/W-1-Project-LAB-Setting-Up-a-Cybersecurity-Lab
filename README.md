@@ -56,41 +56,41 @@ graph LR
 ### Step 1 — Open VirtualBox's global network settings
 `File → Tools → Network` inside VirtualBox Manager.
 
-![Step 1](./screenshots/01-open-virtualbox-network-settings.png)
+![Step 1](./Snaps/01-open-virtualbox-network-settings.png)
 
 ### Step 2 — Create the NAT Network
 Under **NAT Networks**, create a network (`NatNetwork`) with IPv4 Prefix `10.0.0.0/24` and DHCP enabled at the network level.
 
-![Step 2](./screenshots/02-configure-natnetwork-subnet.png)
+![Step 2](./Snaps/02-configure-natnetwork-subnet.png)
 
 ### Step 3 — Import the Kali VM
 From the VirtualBox Manager home screen, click **Open** to import a pre-built Kali appliance.
 
-![Step 3](./screenshots/03-import-kali-vm-open.png)
+![Step 3](./Snaps/03-import-kali-vm-open.png)
 
 ### Step 4 — Select the extracted Kali VM folder
 
-![Step 4](./screenshots/04-select-kali-vm-file.png)
+![Step 4](./Snaps/04-select-kali-vm-file.png)
 
 ### Step 5 — Attach Adapter 1 to the NAT Network
 `Kali VM → Settings → Network → Adapter 1 → Attached to: NAT Network → NatNetwork`
 
-![Step 5](./screenshots/05-attach-adapter1-to-natnetwork.png)
+![Step 5](./Snaps/05-attach-adapter1-to-natnetwork.png)
 
 ### Step 6 — Set Promiscuous Mode and confirm the virtual cable is connected
 This checkbox controls the *simulated physical link* of the virtual NIC — see the [Troubleshooting Log](#-troubleshooting-log) below for why this matters.
 
-![Step 6](./screenshots/06-adapter-cable-connected-promiscuous.png)
+![Step 6](./Snaps/06-adapter-cable-connected-promiscuous.png)
 
 ### Step 7 — Start the Kali VM
 Confirm Adapter 1 shows `NAT Network, 'NatNetwork'` before booting.
 
-![Step 7](./screenshots/07-start-kali-vm.png)
+![Step 7](./Snaps/07-start-kali-vm.png)
 
 ### Step 8 — Inside Kali, open the network connection editor
 Click the network icon → **Edit Connections…**
 
-![Step 8](./screenshots/08-open-edit-connections-in-kali.png)
+![Step 8](./Snaps/08-open-edit-connections-in-kali.png)
 
 ### Step 9 — Set a static IP, gateway, and DNS
 Under **IPv4 Settings**, set Method to **Manual**:
@@ -101,26 +101,26 @@ Gateway : 10.0.0.1
 DNS     : 8.8.8.8
 ```
 
-![Step 9](./screenshots/09-set-static-ip-gateway-dns.png)
+![Step 9](./Snaps/09-set-static-ip-gateway-dns.png)
 
 ### Step 10 — Verify the interface
 ```bash
 ip a
 ```
 
-![Step 10](./screenshots/10-verify-ip-a.png)
+![Step 10](./Snaps/10-verify-ip-a.png)
 
 ### Step 11 — Verify internet connectivity (ICMP)
 ```bash
 ping google.com
 ```
 
-![Step 11](./screenshots/11-ping-google-success.png)
+![Step 11](./Snaps/11-ping-google-success.png)
 
 ### Step 12 — Verify application-layer connectivity (browser)
 Opened Firefox and loaded `fortinet.com` to confirm HTTP/HTTPS traffic, not just ICMP.
 
-![Step 12](./screenshots/12-browser-fortinet-success.png)
+![Step 12](./Snaps/12-browser-fortinet-success.png)
 
 Snapshot taken immediately after this working state to preserve a known-good baseline.
 
