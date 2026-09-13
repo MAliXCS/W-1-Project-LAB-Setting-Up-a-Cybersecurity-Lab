@@ -191,7 +191,7 @@ Snapshot taken immediately after this working state to preserve a known-good bas
 ## 👤 Author
 
 **M. Ali** — [@MAliXCS](https://github.com/MAliXCS)
-Cybersecurity Intern | Documenting hands-on lab work as I go
+Cybersecurity Intern at NETWORK WALKS| Documenting hands-on lab work as I go
 
 ---
 
